@@ -14,16 +14,26 @@
 }
 
 .conteudoPrincipal-cursos-link {
+    justify-content: center;
     width: 23%;
-    margin: 1%;
+    margin: 10px;
 }
 
-.conteudoPrincipal-cursos-link:nth-child(4n) {
-    margin-right: 0;
+.videoSobre .container {
+    display: flex;
+
 }
 
-.conteudoPrincipal-cursos-link:nth-child(4n+1) {
-    margin-left: 0;
+.videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.videoSobre-sobre-list, .videoSobre-video {
+    flex-grow: 1;
+    flex-grow: 1;
 }
 
 .rodapePrincipal-navMap-list {
@@ -42,7 +52,6 @@
 .rodapePrincipal-patrocinadores-list {
     display: flex;
     align-items:center;
-    justify-content: space-around;
     width: 70%;
 
 }
@@ -53,4 +62,83 @@
 
 .rodapePrincipal-contatoForm-fieldset {
     display: flex;
+}
+
+@media screen and (min-width:769px) and (max-width:999px) {
+    .conteudoPrincipal-cursos {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .conteudoPrincipal-cursos-link {
+        width: 45%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        flex-direction: column;
+        height: 455px;
+    }
+    .videoSobre .container {
+        flex-direction: column;
+    }
+    
+    .videoSobre-video {
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .cabecalhoPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .videoSobre .container {
+        flex-direction: column;
+    }
+
+    .videoSobre-video {
+        margin: 0 auto;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        margin: 0;
+        width: 100%;
+    }
+
+    .rodape-Primcipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+    }
 }
